@@ -55,6 +55,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, Meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class UInputAction> QuaterMoveAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, Meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<class UInputAction> AttackAction;
+
 
 	void ShoulderMove(const FInputActionValue& Value);
 	void ShoulderLook(const FInputActionValue& Value);
@@ -62,5 +65,7 @@ protected:
 
 	// 어떤 상태인지를 확인하기 위한 열거형 타입 변수
 	ECharacterControlType CurrentCharacterControlType;
+
+	void Attack();
 
 };
