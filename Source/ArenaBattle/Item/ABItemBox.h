@@ -18,6 +18,9 @@ public:
 	FORCEINLINE class UBoxComponent* GetTrigger() { return Trigger; }
 
 protected:
+	virtual void PostInitializeComponents() override;
+
+protected:
 	// 루트 컴포넌트
 	UPROPERTY(VisibleAnywhere, Category = Box)
 	TObjectPtr<class UBoxComponent> Trigger;
