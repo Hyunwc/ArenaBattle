@@ -23,7 +23,7 @@ AABGameMode::AABGameMode()
 	
 	// 헤더 include 없이 해당 클래스 주소를 통해
 	// 플레이어 컨트롤러 클래스로 월드셋팅 설정
-	static ConstructorHelpers::FClassFinder<APlayerController> PlayerControllerRef(TEXT("Script/ArenaBattle.ABPlayerController"));
+	static ConstructorHelpers::FClassFinder<APlayerController> PlayerControllerRef(TEXT("/Script/ArenaBattle.ABPlayerController"));
 	if (PlayerControllerRef.Class)
 	{
 		PlayerControllerClass = PlayerControllerRef.Class;
